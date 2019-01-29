@@ -13,37 +13,33 @@ class SearchBar extends React.Component {
     renderHelper() {
         return (
             <div className="ui secondary menu">
-
                 <form className="" onSubmit={this.onFormSubmit} >
-                    {/* <a className=" inverted item">
-                        <i className="huge heartbeat icon"></i>
-                        <h1 className="font-style">FilmIn</h1>
-                    </a> */}
                     <div className="ui left aligned category search" >
-                        <div className="ui icon input" style={{ marginLeft: 'px' }} >
-                            <div className="ui icon input">
-                                <input
-                                    className="prompt"
-                                    type="text"
-                                    value={this.state.term}
-                                    onChange={e => this.setState({ term: e.target.value })}
-                                    placeholder="Search For a Movie..."
-                                    style={{ width: '800px', height: '80px' }}
-                                />
-                                <i className="search icon"></i>
-                            </div>
-                            <div className="results"></div>
+                        <div className="ui icon input">
+                            <a href="SearchBar.js">
+                                <h1 style={{ color: '#9CE9A4', fontSize: '35px', textAlign: 'left', marginLeft: '60px', marginTop: '30px' }}>FilmIn</h1>
+                            </a>
+                            <input
+                                className="prompt"
+                                type="text"
+                                value={this.state.term}
+                                onChange={e => this.setState({ term: e.target.value })}
+                                placeholder="search for a movie..."
+                                style={{ fontSize: '25px', width: '500px', height: '60px', marginLeft:'600px', marginTop: '20px' }}
+                            />
+                            <i className="big search icon" style={{ marginTop: '11px' }}></i>
                         </div>
+                        <div className="results"></div>
                     </div>
                 </form>
-                
+
             </div >
         );
     }
-        
+
     render() {
         return <div>{this.renderHelper()}</div>;
     }
 }
-        
+
 export default SearchBar;
